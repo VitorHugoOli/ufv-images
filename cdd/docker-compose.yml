@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  runner:
+    build: .
+    container_name: cdd-runner
+    working_dir: /code
+    command: jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
+    volumes:
+      - ./:/code
+    ports:
+      - 8888:8888

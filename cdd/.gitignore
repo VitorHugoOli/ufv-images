@@ -1,0 +1,6 @@
+.git
+.ipynb_checkpoints
+.DS_STORE
+src/*
+!src/.gitkeep
+!src/example.ipynb

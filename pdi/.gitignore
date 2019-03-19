@@ -1,0 +1,6 @@
+.git
+.DS_STORE
+src/*
+!src/.gitkeep
+!src/example.py
+!src/stars.png

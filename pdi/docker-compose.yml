@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  pdi:
+    build: .
+    working_dir: /home/pdi/src
+    container_name: pdi-container
+    command: "sleep && ''"
+    volumes:
+      - ./:/home/pdi
+    environment:
+      - DISPLAY=${DISPLAY_X}
