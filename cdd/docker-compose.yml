@@ -2,10 +2,10 @@ version: '2'
 
 services:
   runner:
-    build: .
+    # build: . # Caso queira personalizar o Dockerfile.
+    image: gfviegas/cdd # Se usar a opção build, comente esta.
     container_name: cdd-runner
     working_dir: /code
-    command: jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
     volumes:
       - ./:/code
     ports:

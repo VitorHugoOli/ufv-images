@@ -2,11 +2,11 @@ version: '2'
 
 services:
   pdi:
-    build: .
-    working_dir: /home/pdi/src
+    # build: . # Caso queira personalizar o Dockerfile.
+    image: gfviegas/pdi # Se usar a opção build, comente esta.
+    working_dir: /code/src
     container_name: pdi-container
-    command: "sleep && ''"
     volumes:
-      - ./:/home/pdi
+      - ./:/code
     environment:
       - DISPLAY=${DISPLAY_X}
